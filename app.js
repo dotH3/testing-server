@@ -14,6 +14,9 @@ app.use(express.json());
 
 
 app.use(path.freeCandies,require('./routes/free-candies'))
+app.use('/',(req,res)=>{
+  return res.send("sas")
+})
 
 app.listen(port, ()=>{
   console.log('Server: http://localhost:'+port)
